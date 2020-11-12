@@ -1,4 +1,4 @@
-# Hello world docker action
+# Glip Notify Action
 
 Sends a message to Glip based for the Github Action
 
