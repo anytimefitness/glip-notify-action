@@ -2,6 +2,8 @@
 
 Sends a message to Glip based for the Github Action
 
+This action likely only works on [v1 of Glip's webhook posting](https://developers.ringcentral.com/guide/team-messaging/manual/formatting).
+
 ## Inputs
 
 ### `webhook_url`
@@ -10,7 +12,11 @@ Sends a message to Glip based for the Github Action
 
 ### `title`
 
-**Required** Title of the message. You can customize the message to add information specific to the event.
+Title of the message. You can customize the message to add information specific to the event.
+
+### `text`
+
+Text of the message. You can customize the message to add information specific to the event.
 
 ### `color`
 

@@ -6,7 +6,8 @@ inputs:
     required: true
   title:
     description: 'Title of the message. You can customize the message to add information specific to the event.'
-    required: true
+  text:
+    description: 'Text of the message. You can customize the message to add information specific to the event.'    
   color:
     description: 'Color of the message'
     default: '#CC0000'
@@ -16,4 +17,5 @@ runs:
   args:
     - ${{ inputs.webhook_url }}
     - ${{ inputs.title }}
+    - ${{ inputs.text }}
     - ${{ inputs.color }}

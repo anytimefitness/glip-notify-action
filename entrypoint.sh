@@ -2,7 +2,8 @@
 
 WEBHOOK_URL=$1
 TITLE=$2
-COLOR=$3
+TEXT=$3
+COLOR=$4
 
 generate_post_data()
 {
@@ -13,6 +14,7 @@ generate_post_data()
   "attachments" :
   [{
     "title": "$TITLE",
+    "text": "$TEXT",
     "color" : "$COLOR",
     "fields" : [
       {
