@@ -1,0 +1,19 @@
+name: 'Glip Notify'
+description: 'Sends a message to Glip based for the Github Action'
+inputs:
+  webhook_url:
+    description: 'Glip Webhook URL. You can get this by adding a webhook integration to a Glip conversation.'
+    required: true
+  title:
+    description: 'Title of the message. You can customize the message to add information specific to the event.'
+    required: true
+  color:
+    description: 'Color of the message'
+    default: '#CC0000'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.webhook_url }}
+    - ${{ inputs.title }}
+    - ${{ inputs.color }}
